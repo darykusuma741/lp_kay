@@ -1,5 +1,9 @@
 # React + TypeScript + Vite
 
+# untuk masuk di dalam container
+
+docker exec -it lp_kay sh
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
