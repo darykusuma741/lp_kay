@@ -18,11 +18,6 @@ const HomeHeader: React.FC = () => {
         <span className="font-extrabold">DEPOK </span>
         is the Best
       </p>
-      <div className="absolute top-6 left-6">
-        <p className="text-[1rem] font-extralight tracking-wide text-white">
-          <span className="font-extrabold">KAY</span> Digital Studio ©
-        </p>
-      </div>
     </div>
   );
 };

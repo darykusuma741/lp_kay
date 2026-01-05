@@ -27,6 +27,11 @@ function Home() {
         </p>
         {/* <h1 className="text-4xl font-bold text-white">Section 2</h1> */}
       </div>
+      <div className="fixed z-50 top-6 left-6">
+        <p className="text-[1rem] font-extralight tracking-wide text-white">
+          <span className="font-extrabold">KAY</span> Digital Studio ©
+        </p>
+      </div>
     </div>
   );
 }
