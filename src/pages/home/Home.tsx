@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
-import { usePageMeta } from '../../hooks/usePageMeta';
+import { useBodyClass } from '../../hooks/useBodyClass';
+import HomeHeader from './Home.header';
 
 function Home() {
-  usePageMeta({
-    title: 'Kay Digital Studio – Interior & IT Solutions',
-  });
+  useBodyClass('bg-blue-50');
 
   return (
-    <div>
-      <h1>Home Page</h1>
-      <Link to="/profile">Ke Profile</Link>
+    <div className="relative w-screen h-screen overflow-x-scroll flex snap-x snap-mandatory">
+      <HomeHeader />
+      <div className="shrink-0 w-screen h-screen snap-start bg-sky-200 flex items-center justify-center">
+        <h1 className="text-4xl font-bold text-white">Section 2</h1>
+      </div>
     </div>
   );
 }
