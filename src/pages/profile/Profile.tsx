@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 function Profile() {
   return (
     <>
-      <h1>Profile Page</h1>
+      <h1>Profilio Page</h1>
       <Link to="/">Ke Home</Link>
     </>
   );
