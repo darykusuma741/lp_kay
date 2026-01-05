@@ -5,7 +5,7 @@ function Home() {
   useBodyClass('bg-black');
 
   return (
-    <div className="relative w-screen h-screen overflow-x-scroll flex snap-x snap-mandatory">
+    <div className="relative overscroll-none w-screen h-screen overflow-x-scroll flex snap-x snap-mandatory overflow-hidden">
       <HomeHeader />
       <div className="relative overflow-hidden shrink-0 w-screen h-screen snap-start bg-linear-to-br from-sky-800 to-black flex items-center justify-center">
         <p
@@ -13,7 +13,7 @@ function Home() {
         absolute
       select-none
       pointer-events-none
-      text-[3rem]
+      text-[2.5rem]
       font-light
       tracking-tight
       bg-linear-to-r from-white/60 to-white/4
@@ -23,7 +23,7 @@ function Home() {
     "
         >
           <span className="font-extrabold">DEPOK </span>
-          so Cute!!
+          so Cute!
         </p>
         {/* <h1 className="text-4xl font-bold text-white">Section 2</h1> */}
       </div>
