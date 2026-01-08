@@ -44,10 +44,11 @@
   }
 }
 
-@media (max-height: 700px) {
+@media (max-height: 700px) and (max-width: 819px) {
   .hero-container-content{
     gap: 2rem;
     flex-direction: row;
+    overflow: scroll;
   }
   
 }
