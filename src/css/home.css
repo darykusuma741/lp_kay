@@ -1,0 +1,15 @@
+
+.hero-container-content-1 { order: 2; }
+.hero-container-content-2 { order: 1; }
+
+.hero-container-content {
+  flex-direction: column; /* default di mobile */
+}
+
+@media (min-width: 1040px) {
+  .hero-container-content {
+    flex-direction: row;
+  }
+  .hero-container-content-1 { order: 1; }
+  .hero-container-content-2 { order: 2; }
+}

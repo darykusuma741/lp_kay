@@ -1,0 +1,17 @@
+@theme {
+  --color-white: #fff;
+  --color-midnight: #060610;
+  --color-stone: #A1A1AA;
+}
+
+.btn-gradient {
+  border: 1px solid transparent;
+  background: linear-gradient(var(--color-midnight), var(--color-midnight)) padding-box,
+              linear-gradient(to right, #6DDCFF, #7F60F9) border-box;
+}
+
+.btn-gradient:hover{
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) padding-box,
+              linear-gradient(to right, #6DDCFF, #7F60F9) border-box;
+              
+}
