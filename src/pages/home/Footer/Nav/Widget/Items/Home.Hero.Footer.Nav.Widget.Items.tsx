@@ -1,0 +1,31 @@
+interface NavItem {
+  label: string;
+  href: string;
+}
+
+interface HomeHeroFooterNavWidgetItemsProps {
+  title: string;
+  items: NavItem[];
+}
+
+const HomeHeroFooterNavWidgetItems: React.FC<HomeHeroFooterNavWidgetItemsProps> = ({
+  title,
+  items
+}) => {
+  return (
+    <div className="flex flex-col text-midnight gap-2 text-[0.9rem]">
+      <p className="font-ibm font-semibold">{title}</p>
+      {items.map((item, index) => (
+        <a
+          key={index}
+          href={item.href}
+          className="font-light hover:cursor-pointer hover:text-midnight/20 transition-colors"
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  );
+};
+
+export default HomeHeroFooterNavWidgetItems;

@@ -5,7 +5,7 @@ import HomeHeroContent from './Content/Home.Hero.Content';
 const HomeHero: React.FC = () => {
   return (
     <div
-      className="relative overflow-hidden w-screen h-screen bg-midnight bg-center bg-cover bg-no-repeat"
+      className="overflow-hidden w-screen min-h-200 sm:h-screen h-full bg-midnight bg-center bg-cover bg-no-repeat"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <HomeHeroHeader />

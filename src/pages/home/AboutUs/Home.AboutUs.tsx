@@ -13,7 +13,7 @@ const HomeAboutUs: React.FC = () => {
       <HomeAboutUsContent />
       <HomeAboutUsFact />
       <hr className="md:block hidden border-t border-charcoal w-160" />
-      <button className="py-[0.7rem] px-[1.8rem] text-[0.9rem] hover:cursor-pointer rounded-full transition-all duration-300 text-white bg-linear-to-r hover:to-sky from-sky/20 hover:from-indigo to-indigo/20">
+      <button className="font-ibm py-[0.7rem] px-[1.8rem] text-[0.9rem] hover:cursor-pointer rounded-full transition-all duration-300 text-white bg-linear-to-r hover:to-sky from-sky/20 hover:from-indigo to-indigo/20">
         View Show Catalogue
       </button>
     </div>

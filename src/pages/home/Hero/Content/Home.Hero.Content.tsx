@@ -2,12 +2,12 @@ import photo from '../../../../assets/photo.png';
 
 const HomeHeroContent: React.FC = () => {
   return (
-    <div className="absolute pb-48 hero-container-content w-screen h-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20">
+    <div className="mt-3 sm:mt-30 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20">
       <div className="flex flex-col gap-6 sm:w-140 w-full hero-container-content-1">
         <h1 className="text-white font-ibm font-normal text-[4rem] hero-content-title">
           Founder of KAY Digital Studio
         </h1>
-        <p className="text-stone text-[1rem] italic hero-content">
+        <p className="text-stone text-[1rem] italic hero-content leading-loose">
           “Kay Digital Studio was born from a belief that every idea, no matter how small, can grow
           into something meaningful when combined with creativity and dedication. Our mission is not
           only to build digital products and interior spaces, but also to help our clients turn

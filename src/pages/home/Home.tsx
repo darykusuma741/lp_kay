@@ -1,6 +1,7 @@
-import { useBodyClass } from '../../hooks/useBodyClass';
+import { useBodyClass } from '../../common/hooks/useBodyClass';
 import HomeAboutUs from './AboutUs/Home.AboutUs';
 import HomeFeatures from './Features/Home.Features';
+import HomeHeroFooter from './Footer/Home.Hero.Footer';
 import HomeHero from './Hero/Home.Hero';
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
       <HomeHero />
       <HomeFeatures />
       <HomeAboutUs />
+      <HomeHeroFooter />
     </div>
   );
 }
