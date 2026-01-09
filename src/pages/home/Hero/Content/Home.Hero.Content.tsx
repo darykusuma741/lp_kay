@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import photo from '../../../../assets/photo.png';
+import MyPerson from '../../../../common/components/MyPerson';
 
 const HomeHeroContent: React.FC = () => {
   // ambil scroll position
@@ -11,10 +11,10 @@ const HomeHeroContent: React.FC = () => {
   return (
     <motion.div
       style={{ y }}
-      className="mt-25 sm:mb-35 mb-10 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20"
+      className="mt-20 sm:mb-35 mb-10 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20"
     >
       <div className="flex flex-col gap-6 sm:w-140 w-full hero-container-content-1">
-        <h1 className="text-white font-ibm font-normal text-[4rem] hero-content-title">
+        <h1 className="text-white font-ibm font-normal sm:text-[4rem] text-[2rem]">
           Founder of <span className="font-extrabold">KAY Digital Studio</span>
         </h1>
         <p className="text-stone text-[1rem] italic hero-content leading-loose">
@@ -32,9 +32,10 @@ const HomeHeroContent: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="lg:block sm:hidden block  w-90 items-center hero-container-photo">
+      <MyPerson className="xl:block sm:hidden block items-center md:order-2 order-1" />
+      {/* <div className="lg:block sm:hidden block w-90 items-center hero-container-photo">
         <img src={photo} />
-      </div>
+      </div> */}
     </motion.div>
   );
 };
