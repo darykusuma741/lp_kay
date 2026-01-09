@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 interface HomeFeaturesItemsProps {
   src: string;
   title: string;
@@ -6,13 +8,18 @@ interface HomeFeaturesItemsProps {
 
 const HomeFeaturesItems: React.FC<HomeFeaturesItemsProps> = ({ src, title, content }) => {
   return (
-    <div className="flex flex-col gap-4 ">
+    <motion.div
+      className="flex flex-col gap-4"
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      initial={{ opacity: 0, y: -120, scale: 1.3 }}
+      transition={{ duration: 0.8, type: 'tween' }}
+    >
       <div className="mb-4">
         <img src={src} className="h-8" alt="" />
       </div>
       <div className="font-ibm font-bold text-[1.125rem]">{title}</div>
       <div className="text-[1rem] font-Inter font-light">{content}</div>
-    </div>
+    </motion.div>
   );
 };
 

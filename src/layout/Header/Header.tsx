@@ -16,7 +16,7 @@ const Header: React.FC = () => {
 
   return (
     <div
-      className={`fixed w-screen flex justify-between items-center m2:px-37.5 md:px-20 px-10 transition-all duration-300 ${
+      className={`fixed z-50 w-screen flex justify-between items-center m2:px-37.5 md:px-20 px-10 transition-all duration-300 ${
         scrolled ? 'bg-midnight shadow-lg h-16' : 'bg-transparent h-25'
       }`}
     >

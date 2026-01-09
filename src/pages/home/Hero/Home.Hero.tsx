@@ -1,14 +1,11 @@
-import bg from '../../../assets/bg.svg';
 import HomeHeroContent from './Content/Home.Hero.Content';
+import MyBg from '../../../common/components/MyBg';
 
 const HomeHero: React.FC = () => {
   return (
-    <div
-      className="parallax overflow-hidden w-screen min-h-200 sm:h-screen h-full bg-midnight bg-center bg-cover bg-no-repeat"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
+    <MyBg className="overflow-hidden justify-center items-center flex w-screen h-screen bg-midnight bg-center bg-cover bg-no-repeat">
       <HomeHeroContent />
-    </div>
+    </MyBg>
   );
 };
 

@@ -1,8 +1,18 @@
+import { motion, useScroll, useTransform } from 'framer-motion';
 import photo from '../../../../assets/photo.png';
 
 const HomeHeroContent: React.FC = () => {
+  // ambil scroll position
+  const { scrollY } = useScroll();
+
+  // transform scroll ke translateY untuk parallax
+  const y = useTransform(scrollY, [0, 700], [0, -100], { clamp: true });
+
   return (
-    <div className="mt-25 sm:mt-52 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20">
+    <motion.div
+      style={{ y }}
+      className="mt-25 sm:mb-35 mb-10 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20"
+    >
       <div className="flex flex-col gap-6 sm:w-140 w-full hero-container-content-1">
         <h1 className="text-white font-ibm font-normal text-[4rem] hero-content-title">
           Founder of KAY Digital Studio
@@ -25,7 +35,7 @@ const HomeHeroContent: React.FC = () => {
       <div className="lg:block sm:hidden block  w-90 items-center hero-container-photo">
         <img src={photo} />
       </div>
-    </div>
+    </motion.div>
   );
 };
 
