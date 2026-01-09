@@ -5,7 +5,7 @@
 }
 
 .custom-link::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -20,7 +20,6 @@
   width: 100%;
 }
 
-.custom-link:hover{
+.custom-link:hover {
   padding: 0.5rem 0.5rem;
-
 }

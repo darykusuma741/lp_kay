@@ -1,22 +1,21 @@
 @theme {
   --color-white: #fff;
   --color-midnight: #060610;
-  --color-stone: #A1A1AA;
-  --color-mist: #E4E4E7;
+  --color-stone: #a1a1aa;
+  --color-mist: #e4e4e7;
   --color-charcoal: #303040;
-  --color-sky: #6DDCFF;
-  --color-indigo: #7F60F9;
-  --color-slate: #52525B;
+  --color-sky: #6ddcff;
+  --color-indigo: #7f60f9;
+  --color-slate: #52525b;
 }
 
 .btn-gradient {
   border: 1px solid transparent;
   background: linear-gradient(var(--color-midnight), var(--color-midnight)) padding-box,
-              linear-gradient(to right, var(--color-sky), var(--color-indigo)) border-box;
+    linear-gradient(to right, var(--color-sky), var(--color-indigo)) border-box;
 }
 
-.btn-gradient:hover{
+.btn-gradient:hover {
   background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) padding-box,
-              linear-gradient(to right, var(--color-sky), var(--color-indigo)) border-box;
-              
+    linear-gradient(to right, var(--color-sky), var(--color-indigo)) border-box;
 }
