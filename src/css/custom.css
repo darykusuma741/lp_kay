@@ -23,3 +23,7 @@
 .custom-link:hover {
   padding: 0.5rem 0.5rem;
 }
+
+p::selection {
+  @apply bg-orange-700 text-white;
+}

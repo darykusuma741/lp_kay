@@ -11,7 +11,7 @@ interface FooterNavWidgetItemsProps {
 const FooterNavWidgetItems: React.FC<FooterNavWidgetItemsProps> = ({ title, items }) => {
   return (
     <div className="flex flex-col text-midnight gap-2 text-[0.9rem]">
-      <p className="font-ibm font-semibold">{title}</p>
+      <h3 className="font-ibm font-semibold">{title}</h3>
       {items.map((item, index) => (
         <a
           key={index}

@@ -4,9 +4,9 @@ const HomeAboutUsTitle: React.FC = () => {
       <h1 className="font-ibm text-[1.9rem] sm:text-[2.75rem] text-white mb-4">
         Your Vision, Our Creation.
       </h1>
-      <p className="text-[0.9rem] font-light text-stone">
+      <h3 className="text-[0.9rem] font-light text-stone">
         Crafting innovative digital and interior solutions.
-      </p>
+      </h3>
     </div>
   );
 };

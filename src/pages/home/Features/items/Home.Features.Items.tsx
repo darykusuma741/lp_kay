@@ -18,7 +18,7 @@ const HomeFeaturesItems: React.FC<HomeFeaturesItemsProps> = ({ src, title, conte
         <img src={src} className="h-8" alt="" />
       </div>
       <div className="font-ibm font-bold text-[1.125rem]">{title}</div>
-      <div className="text-[1rem] font-Inter font-light">{content}</div>
+      <p className="text-[1rem] font-Inter font-light">{content}</p>
     </motion.div>
   );
 };

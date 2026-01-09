@@ -15,7 +15,7 @@ const HomeHeroContent: React.FC = () => {
     >
       <div className="flex flex-col gap-6 sm:w-140 w-full hero-container-content-1">
         <h1 className="text-white font-ibm font-normal text-[4rem] hero-content-title">
-          Founder of KAY Digital Studio
+          Founder of <span className="font-extrabold">KAY Digital Studio</span>
         </h1>
         <p className="text-stone text-[1rem] italic hero-content leading-loose">
           “Kay Digital Studio was born from a belief that every idea, no matter how small, can grow
