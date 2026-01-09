@@ -11,11 +11,17 @@ const HomeHeroContent: React.FC = () => {
   return (
     <motion.div
       style={{ y }}
-      className="mt-20 sm:mb-35 mb-10 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20"
+      className="mt-30 sm:mb-35 mb-10 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20"
     >
       <div className="flex flex-col gap-6 sm:w-140 w-full hero-container-content-1">
         <h1 className="text-white font-ibm font-normal sm:text-[4rem] text-[2rem]">
-          Founder of <span className="font-extrabold">KAY Digital Studio</span>
+          Founder of{' '}
+          <span className="font-extrabold">
+            <span className="bg-linear-to-r from-cyan-500 to-purple-700 bg-clip-text text-transparent">
+              KAY{' '}
+            </span>
+            Digital Studio
+          </span>
         </h1>
         <p className="text-stone text-[1rem] italic hero-content leading-loose">
           “Kay Digital Studio was born from a belief that every idea, no matter how small, can grow

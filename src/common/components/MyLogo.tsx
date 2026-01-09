@@ -12,7 +12,10 @@ const MyLogo: React.FC<MyLogoProps> = ({ className }) => {
       }`}
     >
       <img src={Logo} className="w-[2.3rem] header-logo-image" />
-      <span className="font-bold">KAY</span> Digital Studio
+      <span className="font-bold bg-linear-to-r from-cyan-500 to-purple-700 bg-clip-text text-transparent">
+        KAY
+      </span>{' '}
+      Digital Studio
     </div>
   );
 };
