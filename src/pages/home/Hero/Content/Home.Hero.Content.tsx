@@ -22,7 +22,7 @@ const HomeHeroContent: React.FC = () => {
           </button>
         </div>
       </div>
-      <div className="w-90 items-center hero-container-photo">
+      <div className="lg:block sm:hidden block  w-90 items-center hero-container-photo">
         <img src={photo} />
       </div>
     </div>
