@@ -1,11 +1,11 @@
-import HomeHeroFooterNavWidgetItems from './Items/Home.Hero.Footer.Nav.Widget.Items';
+import FooterNavWidgetItems from './Items/Footer.Nav.Widget.Items';
 
-const HomeHeroFooterNavWidget: React.FC = () => {
+const FooterNavWidget: React.FC = () => {
   return (
     <div className="md:block hidden">
       <div className="flex flex-row justify-end w-full">
         <div className="flex flex-row xl:gap-[9.13rem] gap-[2.13rem]">
-          <HomeHeroFooterNavWidgetItems
+          <FooterNavWidgetItems
             title="Company"
             items={[
               { label: 'About', href: '#' },
@@ -14,7 +14,7 @@ const HomeHeroFooterNavWidget: React.FC = () => {
               { label: 'Career', href: '#' }
             ]}
           />
-          <HomeHeroFooterNavWidgetItems
+          <FooterNavWidgetItems
             title="Help"
             items={[
               { label: 'Customer Support', href: '#' },
@@ -23,7 +23,7 @@ const HomeHeroFooterNavWidget: React.FC = () => {
               { label: 'Privacy Policy', href: '#' }
             ]}
           />
-          <HomeHeroFooterNavWidgetItems
+          <FooterNavWidgetItems
             title="Resources"
             items={[
               { label: 'Free eBooks', href: '#' },
@@ -37,4 +37,4 @@ const HomeHeroFooterNavWidget: React.FC = () => {
   );
 };
 
-export default HomeHeroFooterNavWidget;
+export default FooterNavWidget;

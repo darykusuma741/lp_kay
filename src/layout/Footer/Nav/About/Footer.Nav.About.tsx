@@ -1,10 +1,10 @@
-import MyLogo from '../../../../../common/components/MyLogo';
-import twitterLogo from '../../../../../assets/twitter.png';
-import facebookLogo from '../../../../../assets/facebook.png';
-import instagramLogo from '../../../../../assets/instagram.png';
-import gitLogo from '../../../../../assets/git.png';
+import MyLogo from '../../../../common/components/MyLogo';
+import twitterLogo from '../../../../assets/twitter.png';
+import facebookLogo from '../../../../assets/facebook.png';
+import instagramLogo from '../../../../assets/instagram.png';
+import gitLogo from '../../../../assets/git.png';
 
-const HomeHeroFooterNavAbout: React.FC = () => {
+const FooterNavAbout: React.FC = () => {
   return (
     <div className="flex flex-col gap-6">
       <MyLogo className="" />
@@ -25,4 +25,4 @@ const HomeHeroFooterNavAbout: React.FC = () => {
   );
 };
 
-export default HomeHeroFooterNavAbout;
+export default FooterNavAbout;

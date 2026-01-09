@@ -3,15 +3,12 @@ interface NavItem {
   href: string;
 }
 
-interface HomeHeroFooterNavWidgetItemsProps {
+interface FooterNavWidgetItemsProps {
   title: string;
   items: NavItem[];
 }
 
-const HomeHeroFooterNavWidgetItems: React.FC<HomeHeroFooterNavWidgetItemsProps> = ({
-  title,
-  items
-}) => {
+const FooterNavWidgetItems: React.FC<FooterNavWidgetItemsProps> = ({ title, items }) => {
   return (
     <div className="flex flex-col text-midnight gap-2 text-[0.9rem]">
       <p className="font-ibm font-semibold">{title}</p>
@@ -28,4 +25,4 @@ const HomeHeroFooterNavWidgetItems: React.FC<HomeHeroFooterNavWidgetItemsProps> 
   );
 };
 
-export default HomeHeroFooterNavWidgetItems;
+export default FooterNavWidgetItems;

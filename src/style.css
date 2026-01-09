@@ -6,6 +6,7 @@
 @import './css/colors.css';
 @import './css/breakpoint.css';
 @import './css/home.css';
+@import './css/custom.css';
 
 body {
   font-family: 'Inter', sans-serif;

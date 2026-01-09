@@ -1,12 +1,5 @@
-import { Link } from 'react-router-dom';
-
 function Profile() {
-  return (
-    <>
-      <h1 className="font-IBMPlexSans">Profilio Page</h1>
-      <Link to="/">Ke Home</Link>
-    </>
-  );
+  return <div className="w-screen bg-midnight h-screen"></div>;
 }
 
 export default Profile;

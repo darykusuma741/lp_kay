@@ -2,7 +2,7 @@ import photo from '../../../../assets/photo.png';
 
 const HomeHeroContent: React.FC = () => {
   return (
-    <div className="mt-3 sm:mt-30 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20">
+    <div className="mt-25 sm:mt-52 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20">
       <div className="flex flex-col gap-6 sm:w-140 w-full hero-container-content-1">
         <h1 className="text-white font-ibm font-normal text-[4rem] hero-content-title">
           Founder of KAY Digital Studio

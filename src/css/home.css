@@ -51,3 +51,7 @@
   }
   
 }
+
+.parallax {
+  background-attachment: fixed; /* Ini kunci parallax */
+}

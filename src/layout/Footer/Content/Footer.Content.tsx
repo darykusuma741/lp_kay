@@ -1,4 +1,4 @@
-const HomeHeroFooterContent: React.FC = () => {
+const FooterContent: React.FC = () => {
   return (
     <div className="flex flex-row justify-between">
       <div className="sm:w-60 w-full">
@@ -13,4 +13,4 @@ const HomeHeroFooterContent: React.FC = () => {
   );
 };
 
-export default HomeHeroFooterContent;
+export default FooterContent;
