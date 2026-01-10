@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import MyLogo from '../../common/components/MyLogo';
 
 const HeaderNav: React.FC = () => {
@@ -7,24 +7,36 @@ const HeaderNav: React.FC = () => {
       <MyLogo />
       <ul className="m2:flex hidden space-x-17">
         <li className="hover:text-gray-200 cursor-pointer">
-          <Link to="/" className="custom-link">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
+          >
             Home
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:text-gray-200 cursor-pointer">
-          <Link to="/Profile" className="custom-link">
-            Profile
-          </Link>
+          <NavLink
+            to="/Profile"
+            className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
+          >
+            Product
+          </NavLink>
         </li>
         <li className="hover:text-gray-200 cursor-pointer">
-          <Link to="/services" className="custom-link">
+          <NavLink
+            to="/services"
+            className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
+          >
             Services
-          </Link>
+          </NavLink>
         </li>
         <li className="hover:text-gray-200 cursor-pointer">
-          <Link to="/contact" className="custom-link">
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
+          >
             Contact
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </div>
