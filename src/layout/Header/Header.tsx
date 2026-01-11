@@ -1,28 +1,32 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import HeaderBody from './Header.Body';
 import HeaderNavBtn from './Header.Btn';
 import HeaderNav from './Header.Nav';
+import HeaderNavMobile from './Header.Nav.Mobile';
+import useWindowSizeListener from '../../common/hooks/userWindowLitstener';
 
 const Header: React.FC = () => {
-  const [scrolled, setScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50); // scroll > 50px
-    };
+  const handleNavClick = () => {
+    const show = !showNavbar;
+    setShowNavbar(show);
+  };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  useWindowSizeListener(({ width }) => {
+    if (width >= 1024 && showNavbar) {
+      setShowNavbar(false);
+    }
+  });
 
   return (
-    <div
-      className={`fixed z-50 w-screen flex justify-between items-center m2:px-37.5 md:px-20 px-10 transition-all duration-300 ${
-        scrolled ? 'bg-midnight shadow-lg h-16' : 'bg-transparent h-25'
-      }`}
-    >
-      <HeaderNav />
-      <HeaderNavBtn />
-    </div>
+    <>
+      <HeaderBody showNavbar={showNavbar}>
+        <HeaderNav />
+        <HeaderNavBtn onClick={handleNavClick} showNavbar={showNavbar} />
+      </HeaderBody>
+      <HeaderNavMobile onClick={handleNavClick} showNavbar={showNavbar} />
+    </>
   );
 };
 
