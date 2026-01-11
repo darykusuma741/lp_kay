@@ -33,6 +33,10 @@
   .custom-link:hover {
     padding: 0.5rem 0.5rem;
   }
+
+  .btn-navbar-mobile {
+    @apply lg:hidden block cursor-pointer rounded-full hover:bg-amber-50/25 p-2 transition-all;
+  }
 }
 
 p::selection {

@@ -1,4 +1,4 @@
-function Profile() {
+function Product() {
   return (
     <div className="relative w-screen overflow-hidden bg-midnight h-screen justify-center items-center flex">
       <iframe
@@ -12,4 +12,4 @@ function Profile() {
   );
 }
 
-export default Profile;
+export default Product;

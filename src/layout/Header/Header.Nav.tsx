@@ -16,7 +16,7 @@ const HeaderNav: React.FC = () => {
         </li>
         <li className="hover:text-gray-200 cursor-pointer">
           <NavLink
-            to="/profile"
+            to="/product"
             className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
           >
             Product

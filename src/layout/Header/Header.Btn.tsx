@@ -14,13 +14,10 @@ const HeaderNavBtn: React.FC<HeaderNavBtnProps> = ({ onClick, showNavbar }) => {
       </button>
       <button
         onClick={onClick}
-        className={clsx(
-          `lg:hidden block cursor-pointer rounded-full hover:bg-amber-50/25 p-2 transition-all`,
-          {
-            'rotate-180': showNavbar,
-            'rotate-0': !showNavbar
-          }
-        )}
+        className={clsx(`btn-navbar-mobile`, {
+          'rotate-180': showNavbar,
+          'rotate-0': !showNavbar
+        })}
       >
         <img src={navButton} className="h-6 w-6 object-contain" />
       </button>

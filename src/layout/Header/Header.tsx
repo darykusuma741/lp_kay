@@ -1,9 +1,8 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HeaderBody from './Header.Body';
 import HeaderNavBtn from './Header.Btn';
 import HeaderNav from './Header.Nav';
 import HeaderNavMobile from './Header.Nav.Mobile';
-import useWindowSizeListener from '../../common/hooks/userWindowLitstener';
 
 const Header: React.FC = () => {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -13,11 +12,13 @@ const Header: React.FC = () => {
     setShowNavbar(show);
   };
 
-  useWindowSizeListener(({ width }) => {
-    if (width >= 1024 && showNavbar) {
-      setShowNavbar(false);
-    }
-  });
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 1024 && showNavbar) setShowNavbar(false);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <>
