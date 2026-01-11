@@ -12,6 +12,7 @@ import contactIcon from '../../assets/icon/contact.png';
 import contactOnIcon from '../../assets/icon/contact-active.png';
 import teamIcon from '../../assets/icon/team.png';
 import teamOnIcon from '../../assets/icon/team-active.png';
+import searchIcon from '../../assets/icon/search.png';
 import MyIconHover from '../../common/components/MyIconHover';
 
 interface HeaderNavMobileProps {
@@ -55,41 +56,51 @@ const HeaderNavMobile: React.FC<HeaderNavMobileProps> = ({ onClick, showNavbar }
         </button>
       </div>
       <div className="flex flex-col mt-10 text-lg gap-5">
+        <div className="relative w-full ">
+          <img
+            src={searchIcon}
+            className="w-5 h-5 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
+            alt="search icon"
+          />
+          <input
+            type="text"
+            placeholder="Search..."
+            className="w-full pl-11 flex items-center justify-center text-sm pr-4 py-3 rounded-xl border border-gray focus:border-white focus:outline-none transition-all duration-300"
+          />
+        </div>
         {navItems.map((item) => (
-          <div className="w-full">
-            <NavLink
-              key={item.path}
-              to={item.path}
-              onClick={onClick}
-              className={({ isActive }) =>
-                clsx(
-                  'flex items-center gap-1 group w-full bg-midnigh py-2.5 rounded-xl transition-all cursor-pointer',
-                  'hover:px-5 hover:bg-onyx bg-pos-0 hover:bg-pos-100',
-                  {
-                    'hover:bg-linear-to-l/oklch': isActive,
-                    'font-medium px-4 bg-linear-to-r/oklch from-sky to-indigo': isActive
-                  }
-                )
-              }
-            >
-              {({ isActive }: { isActive: boolean }) => (
-                <>
-                  <MyIconHover
-                    img={item.img}
-                    imgHover={isActive ? item.imgHover : item.img}
-                    className="w-6 h-6 bg-center bg-contain bg-no-repeat"
-                  />
-                  <span
-                    className={clsx('text-sm group-hover:text-white', {
-                      'text-midnight font-medium': isActive
-                    })}
-                  >
-                    {item.label}
-                  </span>
-                </>
-              )}
-            </NavLink>
-          </div>
+          <NavLink
+            key={item.path}
+            to={item.path}
+            onClick={onClick}
+            className={({ isActive }) =>
+              clsx(
+                'flex items-center gap-1 group w-full bg-midnigh py-2.5 rounded-xl transition-all cursor-pointer',
+                'hover:px-5 hover:bg-onyx bg-pos-0 hover:bg-pos-100',
+                {
+                  'hover:bg-linear-to-l/oklch': isActive,
+                  'font-medium px-4 bg-linear-to-r/oklch from-sky to-indigo': isActive
+                }
+              )
+            }
+          >
+            {({ isActive }: { isActive: boolean }) => (
+              <>
+                <MyIconHover
+                  img={item.img}
+                  imgHover={isActive ? item.imgHover : item.img}
+                  className="w-6 h-6 bg-center bg-contain bg-no-repeat"
+                />
+                <span
+                  className={clsx('text-sm group-hover:text-white', {
+                    'text-midnight font-medium': isActive
+                  })}
+                >
+                  {item.label}
+                </span>
+              </>
+            )}
+          </NavLink>
         ))}
       </div>
     </nav>
