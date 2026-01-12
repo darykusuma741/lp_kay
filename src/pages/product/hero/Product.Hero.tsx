@@ -30,13 +30,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ handleOnClick }) => {
   // }, [divRef]);
 
   return (
-    <div
-      ref={divRef}
-      className={clsx('relative w-screen h-screen overflow-hidden', {
-        'bg-amber-50': hidden,
-        'bg-midnight': !hidden
-      })}
-    >
+    <div className={clsx('relative w-screen h-screen overflow-hidden')}>
       <iframe
         className="absolute sm:scale-125 scale-120"
         src="https://my.spline.design/untitled-iLjWHNIqTEGc54dSw1GsBQjb/"
