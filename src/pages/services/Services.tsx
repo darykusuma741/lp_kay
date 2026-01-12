@@ -1,6 +1,8 @@
 function Services() {
   return (
-    <div className="w-screen overflow-hidden bg-midnight h-screen justify-center items-center flex"></div>
+    <div className="w-screen bg-midnight h-screen justify-center items-center flex">
+      <div className="card-gd w-40 h-40"></div>
+    </div>
   );
 }
 

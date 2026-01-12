@@ -1,0 +1,32 @@
+@theme {
+  --animate-border-spin: border-spin 2s linear infinite;
+  @keyframes border-spin {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+}
+
+@layer utilities {
+  .card-gd {
+    @apply justify-center w-40 h-10 relative overflow-hidden rounded-full;
+    @apply bg-sky/5 bg-linear-to-r/oklch from-indigo/40 to-onyx/40;
+    @apply hover:scale-90 transition-all duration-300 cursor-pointer hover:active:scale-100;
+    /* @apply relative bg-transparent overflow-hidden rounded-full hover:scale-90 transition-all duration-300 cursor-pointer hover:active:scale-100; */
+  }
+
+  .card-gd::before {
+    background-image: conic-gradient(
+      rgba(109, 220, 255, 0.5) 20deg,
+      rgba(127, 96, 249, 1) 70deg,
+      transparent 160deg
+    );
+    /* @apply absolute w-[150%] h-[150%] left-[-25%] top-[-25%] content-[''] animate-border-spin; */
+    @apply absolute w-[150%] h-[400%] top-[-150%] right-[-25%] content-[''] animate-border-spin;
+  }
+
+  .card-gd-item {
+    /* @apply absolute bg-midnight overflow-hidden rounded-full w-[calc(100%-2px)] content-['asdasd'] h-[calc(100%-2px)] top-px left-px; */
+    @apply absolute rounded-full w-[calc(100%-2px)] h-[calc(100%-2px)] top-px left-px bg-midnight overflow-hidden text-sm;
+  }
+}
