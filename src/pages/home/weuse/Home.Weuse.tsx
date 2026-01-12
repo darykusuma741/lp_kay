@@ -59,7 +59,7 @@ const HomeWeuse: React.FC = () => {
   }, [x]);
 
   return (
-    <div className="bg-white sm:py-10 py-5 overflow-hidden">
+    <div className="bg-white sm:py-10 py-5 overflow-hidden w-screen">
       <motion.div
         className="flex left-0 gap-5"
         ref={containerRef}
