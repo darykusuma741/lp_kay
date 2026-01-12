@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+// import { useEffect, useRef, useState } from 'react';
 import resizeIcon from '../../../assets/resize.png';
 import clsx from 'clsx';
 
@@ -7,8 +7,8 @@ interface ProductHeroProps {
 }
 
 const ProductHero: React.FC<ProductHeroProps> = ({ handleOnClick }) => {
-  const [hidden, setHidden] = useState(false);
-  const divRef = useRef<HTMLDivElement>(null);
+  // const [hidden, setHidden] = useState(false);
+  // const divRef = useRef<HTMLDivElement>(null);
 
   // useEffect(() => {
   //   const handleScroll = () => {
