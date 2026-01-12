@@ -1,4 +1,4 @@
-// import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import resizeIcon from '../../../assets/resize.png';
 import clsx from 'clsx';
 
@@ -7,36 +7,32 @@ interface ProductHeroProps {
 }
 
 const ProductHero: React.FC<ProductHeroProps> = ({ handleOnClick }) => {
-  // const [hidden, setHidden] = useState(false);
-  // const divRef = useRef<HTMLDivElement>(null);
+  const [scrollY, setScrollY] = useState(0);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (divRef.current) {
-  //       const scrollTop = divRef.current.scrollTop;
-  //       setHidden(scrollTop === 0); // true kalau scroll di atas
-  //       console.log('sadsad');
-  //     }
-  //   };
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
 
-  //   const div = divRef.current;
-  //   if (div) {
-  //     div.addEventListener('scroll', handleScroll);
-  //   }
+    window.addEventListener('scroll', handleScroll);
 
-  //   // return () => {
-  //   //   if (div) div.removeEventListener('scroll', handleScroll);
-  //   // };
-  // }, [divRef]);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className={clsx('relative w-screen h-screen overflow-hidden')}>
+    <div className={clsx('relative w-screen h-screen overflow-hidden bg-midnight')}>
       <iframe
         className="absolute sm:scale-125 scale-120"
         src="https://my.spline.design/untitled-iLjWHNIqTEGc54dSw1GsBQjb/"
         width="100%"
         height="100%"
       />
+      <div
+        className={clsx('absolute w-screen h-screen flex', {
+          block: scrollY !== 0,
+          hidden: scrollY === 0
+        })}
+      ></div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
         <div className="card-gd w-40 h-10 text-white" onClick={handleOnClick}>
           <div className="card-gd-item text-center flex justify-center items-center gap-1">

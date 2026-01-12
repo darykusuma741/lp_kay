@@ -5,7 +5,7 @@ import HomeFeaturesItems from './items/Home.Features.Items';
 
 const HomeFeatures: React.FC = () => {
   return (
-    <div className="w-screen flex lg:flex-row flex-col overflow-hidden justify-between items-center gap-20 lg:py-36 py-10 lg:px-36 px-10 bg-white">
+    <div className="w-screen flex lg:flex-row flex-col overflow-hidden justify-between items-center gap-20 lg:py-36 py-10 lg:px-36 px-10 bg-white/97">
       <HomeFeaturesItems
         src={csTrust}
         title="Customer Trust"
