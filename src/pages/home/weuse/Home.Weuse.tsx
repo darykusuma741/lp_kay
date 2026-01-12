@@ -46,7 +46,7 @@ const HomeWeuse: React.FC = () => {
 
     const container = containerRef.current;
     const totalWidth = container.scrollWidth / 2 + 10; // scrollWidth total dibagi 2 karena duplikat
-    const duration = 12; // sesuaikan kecepatan
+    const duration = 10; // sesuaikan kecepatan
 
     const controls = animate(x, -totalWidth, {
       duration: duration,
