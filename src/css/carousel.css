@@ -4,7 +4,7 @@
 }
 .crsl .crsl-list {
   @apply flex w-max gap-5;
-  animation: autorun-crsl 14s linear infinite;
+  animation: autorun-crsl 30s linear infinite;
 }
 .crsl .crsl-list img {
   @apply shrink-0 sm:h-12 h-8;
