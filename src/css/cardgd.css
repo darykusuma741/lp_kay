@@ -21,6 +21,7 @@
       rgba(127, 96, 249, 1) 70deg,
       transparent 160deg
     );
+    filter: blur(0px);
     /* @apply absolute w-[150%] h-[150%] left-[-25%] top-[-25%] content-[''] animate-border-spin; */
     @apply absolute w-[150%] h-[400%] top-[-150%] right-[-25%] content-[''] animate-border-spin;
   }

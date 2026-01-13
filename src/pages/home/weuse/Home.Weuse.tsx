@@ -12,8 +12,6 @@ import getxLogo from '../../../assets/brand/getx.png';
 import viteLogo from '../../../assets/brand/vite.png';
 import prismaLogo from '../../../assets/brand/prisma.png';
 import nginxLogo from '../../../assets/brand/nginx.png';
-import { animate, motion, useMotionValue } from 'framer-motion';
-import { useEffect, useRef } from 'react';
 
 interface WeuseItems {
   src: string;
@@ -38,42 +36,34 @@ const HomeWeuse: React.FC = () => {
     { src: nginxLogo, link: 'https://nginx.org/' }
   ];
 
-  const x = useMotionValue(0);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const container = containerRef.current;
-    const totalWidth = container.scrollWidth / 2 + 10; // scrollWidth total dibagi 2 karena duplikat
-    const duration = 10; // sesuaikan kecepatan
-
-    const controls = animate(x, -totalWidth, {
-      duration: duration,
-      ease: 'linear',
-      repeat: Infinity,
-      repeatType: 'loop'
-    });
-
-    return controls.stop;
-  }, [x]);
+  const config = {
+    '--width-crsl': '120px',
+    '--height-crsl': '50px',
+    '--count-crsl': items.length
+  } as any;
 
   return (
-    <div className="bg-white sm:py-10 py-5 overflow-hidden w-screen">
-      <motion.div
-        className="flex left-0 gap-5"
-        ref={containerRef}
-        style={{ x, willChange: 'transform' }}
-      >
-        {[...items, ...items].map((item, idx) => (
-          <img
-            key={idx}
-            src={item.src}
-            className="sm:h-15 h-8 shrink-0 hover:scale-110 transition-all cursor-pointer"
-            onClick={() => window.open(item.link, '_blank')}
-          />
-        ))}
-      </motion.div>
+    <div className="bg-white">
+      <div className="crsl" style={config}>
+        <div className="crsl-list">
+          {[...items].map((item) => (
+            <img
+              src={item.src}
+              // className="sm:h-15 h-8 shrink-0 hover:scale-110 transition-all cursor-pointer"
+              className="hover:scale-110 transition-all cursor-pointer"
+              onClick={() => window.open(item.link, '_blank')}
+            />
+          ))}
+          {[...items].map((item) => (
+            <img
+              src={item.src}
+              // className="sm:h-15 h-8 shrink-0 hover:scale-110 transition-all cursor-pointer"
+              className="hover:scale-110 transition-all cursor-pointer"
+              onClick={() => window.open(item.link, '_blank')}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

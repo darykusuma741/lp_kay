@@ -1,0 +1,25 @@
+.crsl {
+  @apply w-screen overflow-hidden py-8 bg-white;
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+}
+.crsl .crsl-list {
+  @apply flex w-max gap-5;
+  animation: autorun-crsl 14s linear infinite;
+}
+.crsl .crsl-list img {
+  @apply shrink-0 sm:h-12 h-8;
+}
+
+.crsl .crsl-list:hover {
+  /* @apply bg-orange-500; */
+  animation-play-state: paused !important;
+}
+
+@keyframes autorun-crsl {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
