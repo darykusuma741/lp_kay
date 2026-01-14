@@ -80,9 +80,6 @@ const ProductContetnt: React.FC<ProductContetntProps> = ({ ref }) => {
       glrRef?.current?.classList.remove('prev');
       setOnAnimation(false);
     }, 2000);
-
-    // glrRef?.current?.classList.remove('prev');
-    // glrRef?.current?.classList.remove('next');
   }
 
   return (

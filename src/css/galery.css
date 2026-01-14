@@ -82,8 +82,7 @@
 /* arrows */
 
 .glr .glr-arrows {
-  @apply absolute flex gap-2 items-center;
-  top: 76%;
+  @apply absolute flex gap-2 items-center sm:top-[76%] top-[85%];
   right: 60%;
   width: 300px;
   max-width: 30%;
