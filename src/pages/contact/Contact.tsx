@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import galery1 from '../../assets/galery/galery1.png';
 import galery2 from '../../assets/galery/galery2.png';
 import galery3 from '../../assets/galery/galery3.png';
@@ -7,20 +7,37 @@ import galery4 from '../../assets/galery/galery4.png';
 interface GaleryData {
   src: string;
   author: string;
+  des: string;
 }
 
 function Contact() {
   const fakeList: GaleryData[] = [
-    { src: galery1, author: 'Bedroom Design' },
-    { src: galery2, author: 'Dining Room' },
-    { src: galery3, author: 'Kitchen' },
-    { src: galery4, author: 'Sitting Room' }
+    {
+      src: galery1,
+      author: 'Bedroom',
+      des: 'Transform your bedroom into a cozy and aesthetic space with a modern and functional interior design. Located in the Cinere area of Depok, Indonesia, our design combines beauty, comfort, and space efficiency, making every corner of your bedroom warm and inviting. From furniture selection to optimal lighting, every detail is crafted to provide the perfect sleeping experience.'
+    },
+    {
+      src: galery2,
+      author: 'Dining Room',
+      des: 'Transform your dining room into an elegant and welcoming space with a modern and functional interior design. Located in the Cinere area of Depok, Indonesia, our design emphasizes harmony, comfort, and togetherness, making every meal feel special. From the arrangement of the dining table to warm lighting, every detail is crafted to create an unforgettable dining experience.'
+    },
+    {
+      src: galery3,
+      author: 'Kitchen',
+      des: 'Transform your kitchen into a stylish and highly efficient space with a modern and functional interior design. Located in the Cinere area of Depok, Indonesia, our design blends aesthetics with practicality, making cooking activities more enjoyable and organized. From smart storage solutions to ergonomic layouts, every detail is crafted to support a smooth and inspiring culinary experience.'
+    },
+    {
+      src: galery4,
+      author: 'Sitting Room',
+      des: 'Transform your sitting room into a cozy and aesthetically pleasing gathering space with a modern and functional interior design. Located in the Cinere area of Depok, Indonesia, our design highlights comfort, beauty, and relaxation, making every moment spent with family more meaningful. From the choice of sofa to ambient lighting, every detail is crafted to create a warm and inviting atmosphere.'
+    }
   ];
   const fakeList2: GaleryData[] = [
-    { src: galery2, author: 'Dining Room' },
-    { src: galery3, author: 'Kitchen' },
-    { src: galery4, author: 'Sitting Room' },
-    { src: galery1, author: 'Bedroom Design' }
+    { src: galery2, author: 'Dining Room', des: '' },
+    { src: galery3, author: 'Kitchen', des: '' },
+    { src: galery4, author: 'Sitting Room', des: '' },
+    { src: galery1, author: 'Bedroom', des: '' }
   ];
 
   const nextRef = useRef<HTMLButtonElement>(null);
@@ -37,7 +54,12 @@ function Contact() {
     showSlider('prev');
   };
 
+  const [onAnimation, setOnAnimation] = useState(false);
+
   function showSlider(type: string) {
+    if (onAnimation) return;
+    setOnAnimation(true);
+
     let itemSlider = document.querySelectorAll('.glr .glr-list .glr-item');
     let itemThumbneil = document.querySelectorAll('.glr .glr-thumbnail .glr-item');
 
@@ -51,6 +73,12 @@ function Contact() {
       thumbnailRef?.current?.prepend(itemThumbneil[positionLastItem]);
       glrRef?.current?.classList.add('prev');
     }
+    setTimeout(() => {
+      glrRef?.current?.classList.remove('next');
+      glrRef?.current?.classList.remove('prev');
+      setOnAnimation(false);
+    }, 2000);
+
     // glrRef?.current?.classList.remove('prev');
     // glrRef?.current?.classList.remove('next');
   }
@@ -64,15 +92,9 @@ function Contact() {
               <img src={item.src} />
               <div className="glr-content">
                 <div className="glr-author">{item.author}</div>
-                <div className="glr-topic">Bedroom</div>
+                <div className="glr-topic">{item.author}</div>
                 <div className="glr-title">Design</div>
-                <div className="glr-des">
-                  ransform your bedroom into a cozy and aesthetic space with a modern and functional
-                  interior design. Located in the Cinere area of Depok, Indonesia, our design
-                  combines beauty, comfort, and space efficiency, making every corner of your
-                  bedroom warm and inviting. From furniture selection to optimal lighting, every
-                  detail is crafted to provide the perfect sleeping experience.
-                </div>
+                <div className="glr-des">{item.des}</div>
                 <div className="glr-buttons">
                   <button>Detail</button>
                   <button>Contact</button>
@@ -87,7 +109,7 @@ function Contact() {
               <img src={item.src} />
               <div className="glr-content">
                 <div className="glr-title">{item.author}</div>
-                <div className="glr-des">Description</div>
+                <div className="glr-des">{item.author} Design</div>
               </div>
             </div>
           ))}

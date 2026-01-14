@@ -9,9 +9,9 @@ interface HeaderNavBtnProps {
 const HeaderNavBtn: React.FC<HeaderNavBtnProps> = ({ onClick, showNavbar }) => {
   return (
     <>
-      <button className="lg:block hidden header-logo-cu btn-gradient rounded-full hover:text-midnight transition-colors cursor-pointer text-white py-2 px-6">
+      {/* <button className="lg:block hidden header-logo-cu btn-gradient rounded-full hover:text-midnight transition-colors cursor-pointer text-white py-2 px-6">
         Contact us
-      </button>
+      </button> */}
       <button
         onClick={onClick}
         className={clsx(`btn-navbar-mobile`, {
