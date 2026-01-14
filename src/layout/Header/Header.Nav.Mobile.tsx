@@ -39,7 +39,7 @@ const HeaderNavMobile: React.FC<HeaderNavMobileProps> = ({ onClick, showNavbar }
   return (
     <nav
       className={clsx(
-        'fixed top-0 left-0 py-3 h-full w-full bg-midnight text-white z-50 transform transition-transform duration-300 m2:px-37.5 md:px-20 px-10',
+        'fixed top-0 left-0 py-3 h-full w-full bg-midnight text-white z-999 transform transition-transform duration-300 m2:px-37.5 md:px-20 px-10',
         { 'translate-x-0': showNavbar, '-translate-x-full': !showNavbar }
       )}
     >
