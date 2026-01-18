@@ -22,6 +22,7 @@ RUN pnpm build
 FROM nginx:alpine
 
 # Salin hasil build dari stage builder
+COPY nginx/default.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Expose port 80

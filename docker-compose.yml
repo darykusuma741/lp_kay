@@ -5,7 +5,7 @@ services:
     build: .
     container_name: lp_kay
     ports:
-      - "4173:80" # localhost:3000 -> nginx port 80
+      - "8080:80" # localhost:3000 -> nginx port 80
     restart: unless-stopped
     networks:
       - proxy-network
