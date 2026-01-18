@@ -26,7 +26,7 @@ const MyBg2: React.FC<MyBg2Props> = ({ className, children }) => {
   const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -20]);
 
   return (
-    <div ref={containerRef} className={` ${className} relative overflow-hidden`}>
+    <div ref={containerRef} className={`${className} relative overflow-hidden`}>
       <motion.img
         style={{ y: y1, rotate: rotate1 }}
         className="absolute opacity-50 sm:top-[-26%]  top-[-9%] left-[-15%] sm:w-[60vw] w-90 -z-10"

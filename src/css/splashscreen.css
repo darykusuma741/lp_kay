@@ -1,0 +1,8 @@
+.full-txt {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  @apply lg:tracking-[0.18em] md:tracking-[0.2em] tracking-widest;
+}
+
+.full-txt div {
+  /* @apply ml-3 mr-3; */
+}

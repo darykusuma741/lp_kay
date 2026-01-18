@@ -46,16 +46,18 @@ const HomeWeuse: React.FC = () => {
     <div className="bg-white">
       <div className="crsl" style={config}>
         <div className="crsl-list">
-          {[...items].map((item) => (
+          {[...items].map((item, idx) => (
             <img
+              key={idx}
               src={item.src}
               // className="sm:h-15 h-8 shrink-0 hover:scale-110 transition-all cursor-pointer"
               className="hover:scale-110 transition-all cursor-pointer"
               onClick={() => window.open(item.link, '_blank')}
             />
           ))}
-          {[...items].map((item) => (
+          {[...items].map((item, idx) => (
             <img
+              key={idx}
               src={item.src}
               // className="sm:h-15 h-8 shrink-0 hover:scale-110 transition-all cursor-pointer"
               className="hover:scale-110 transition-all cursor-pointer"
