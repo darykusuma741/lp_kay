@@ -3,7 +3,7 @@ import MyLogo from '../../common/components/MyLogo';
 
 const HeaderNav: React.FC = () => {
   return (
-    <div className="flex justify-center items-center text-white text-[1rem] gap-17">
+    <nav className="flex justify-center items-center text-white text-[1rem] gap-17">
       <MyLogo />
       <ul className="m2:flex hidden space-x-17">
         <li className="hover:text-gray-200 cursor-pointer">
@@ -39,7 +39,7 @@ const HeaderNav: React.FC = () => {
           </NavLink>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

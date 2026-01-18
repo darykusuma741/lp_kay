@@ -1,7 +1,7 @@
 import HomeAboutUsContent from './Content/Home.AboutUs.Content';
 import HomeAboutUsTitle from './Title/Home.AboutUs.Title';
 import HomeAboutUsFact from './Fact/Home.AboutUs.Fact';
-import MyBg2 from '../../../common/components/MyBg2';
+import { MyBg2 } from '../../../common/components/MyBg2';
 
 const HomeAboutUs: React.FC = () => {
   return (

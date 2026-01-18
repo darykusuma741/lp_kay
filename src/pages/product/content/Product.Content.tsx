@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import galery1 from '../../../assets/galery/galery1.png';
 import galery2 from '../../../assets/galery/galery2.png';
 import galery3 from '../../../assets/galery/galery3.png';
@@ -48,16 +48,15 @@ const ProductContetnt: React.FC<ProductContetntProps> = ({ ref }) => {
   const listRef = useRef<HTMLDivElement>(null);
   const thumbnailRef = useRef<HTMLDivElement>(null);
 
-  const nextHandle = () => {
-    showSlider('next');
-  };
-
-  const prevHandle = () => {
-    showSlider('prev');
-  };
-
+  const nextHandle = () => showSlider('next');
+  const prevHandle = () => showSlider('prev');
   const [onAnimation, setOnAnimation] = useState(false);
 
+  useEffect(() => {
+    setTimeout(() => {
+      showSlider('next');
+    }, 5000);
+  });
   function showSlider(type: string) {
     if (onAnimation) return;
     setOnAnimation(true);

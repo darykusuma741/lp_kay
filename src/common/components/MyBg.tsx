@@ -29,4 +29,4 @@ const MyBg: React.FC<MyBgProps> = ({ className, children }) => {
   );
 };
 
-export default MyBg;
+export { MyBg };

@@ -37,7 +37,7 @@ const ProductHero: React.FC<ProductHeroProps> = ({ handleOnClick }) => {
         <div className="card-gd w-40 h-10 text-white" onClick={handleOnClick}>
           <div className="card-gd-item text-center flex justify-center items-center gap-1">
             <img src={resizeIcon} alt="" className="h-4" />
-            ist Product
+            List Product
           </div>
         </div>
       </div>

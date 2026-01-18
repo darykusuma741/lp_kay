@@ -14,9 +14,7 @@ const ProductBody: React.FC<ProductBodyProps> = ({ children }) => {
     productContentRef.current?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  return (
-    <div className="relative w-full h-full">{children({ productContentRef, scrollToContent })}</div>
-  );
+  return <div className="relative w-full">{children({ productContentRef, scrollToContent })}</div>;
 };
 
 export default ProductBody;

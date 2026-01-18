@@ -44,4 +44,4 @@ const MyBg2: React.FC<MyBg2Props> = ({ className, children }) => {
   );
 };
 
-export default MyBg2;
+export { MyBg2 };

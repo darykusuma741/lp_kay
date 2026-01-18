@@ -1,16 +1,15 @@
 import ScrollToTopOnMount from '../../common/hooks/ScrollToTopOnMount';
 import ProductBody from './body/Product.Body';
 import ProductContetnt from './content/Product.Content';
-import ProductHero from './hero/Product.Hero';
 
 function Product() {
   return (
     <>
       <ScrollToTopOnMount />
       <ProductBody>
-        {({ productContentRef, scrollToContent }) => (
+        {({ productContentRef }) => (
           <>
-            <ProductHero handleOnClick={scrollToContent} />
+            {/* <ProductHero handleOnClick={scrollToContent} /> */}
             <ProductContetnt ref={productContentRef} />
           </>
         )}

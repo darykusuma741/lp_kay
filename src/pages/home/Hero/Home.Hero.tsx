@@ -1,5 +1,5 @@
 import HomeHeroContent from './Content/Home.Hero.Content';
-import MyBg from '../../../common/components/MyBg';
+import { MyBg } from '../../../common/components/MyBg';
 
 const HomeHero: React.FC = () => {
   return (
