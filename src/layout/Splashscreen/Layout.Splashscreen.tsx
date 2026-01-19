@@ -29,10 +29,11 @@ const LayoutSplashScreen: React.FC<LayoutSplashScreenProps> = ({ children }) => 
     tl.from(
       split.chars,
       {
+        filter: 'blur(10px)',
         opacity: 0,
         stagger: 0.1,
         y: 150,
-        duration: 0.2
+        duration: 0.3
       },
       0.5
     )
@@ -43,7 +44,7 @@ const LayoutSplashScreen: React.FC<LayoutSplashScreenProps> = ({ children }) => 
           stagger: 0.1,
           duration: 0.2
         },
-        '-=1.6'
+        '-=1.2'
       )
       .to(textFull.current, {
         opacity: 0

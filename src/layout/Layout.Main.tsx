@@ -6,12 +6,14 @@ import { LayoutSplashScreen } from './Splashscreen/Layout.Splashscreen';
 const LayoutMain: React.FC = () => {
   return (
     <LayoutSplashScreen>
-      <div className="relative min-h-screen min-w-screen flex flex-co">
+      <div className="relative min-h-screen min-w-screen flex flex-col container">
         <Header />
-        <main>
-          <Outlet />
-          <Footer />
-        </main>
+        <div className="content">
+          <main>
+            <Outlet />
+            <Footer />
+          </main>
+        </div>
       </div>
     </LayoutSplashScreen>
   );

@@ -48,15 +48,27 @@ const ProductContetnt: React.FC<ProductContetntProps> = ({ ref }) => {
   const listRef = useRef<HTMLDivElement>(null);
   const thumbnailRef = useRef<HTMLDivElement>(null);
 
-  const nextHandle = () => showSlider('next');
-  const prevHandle = () => showSlider('prev');
+  const nextHandle = () => {
+    showSlider('next');
+    resetInterval();
+  };
+  const prevHandle = () => {
+    showSlider('prev');
+    resetInterval();
+  };
   const [onAnimation, setOnAnimation] = useState(false);
 
+  const intervalRef = useRef<NodeJS.Timeout | null>(null); // untuk simpan interval
+
   useEffect(() => {
-    setTimeout(() => {
-      showSlider('next');
-    }, 5000);
-  });
+    // mulai interval pertama kali
+    intervalRef.current = setInterval(() => showSlider('next'), 5000);
+
+    return () => {
+      // bersihkan interval saat unmount
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, []);
   function showSlider(type: string) {
     if (onAnimation) return;
     setOnAnimation(true);
@@ -78,8 +90,14 @@ const ProductContetnt: React.FC<ProductContetntProps> = ({ ref }) => {
       glrRef?.current?.classList.remove('next');
       glrRef?.current?.classList.remove('prev');
       setOnAnimation(false);
-    }, 2000);
+    }, 3000);
   }
+
+  // fungsi untuk reset interval
+  const resetInterval = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => showSlider('next'), 5000);
+  };
 
   return (
     <div ref={ref} className="overflow-hidden w-screen h-screen bg-midnight">

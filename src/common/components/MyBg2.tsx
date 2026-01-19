@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import blt1 from '../../assets/blt1.png';
 import blt2 from '../../assets/blt2.png';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 
 interface MyBg2Props {
   className?: string;
@@ -9,35 +10,68 @@ interface MyBg2Props {
 }
 
 const MyBg2: React.FC<MyBg2Props> = ({ className, children }) => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [containerHeight, setContainerHeight] = useState(0);
+  const box = useRef<HTMLDivElement>(null);
+  const image1Ref = useRef<HTMLImageElement>(null);
+  const image2Ref = useRef<HTMLImageElement>(null);
+  const bgRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (containerRef.current) {
-      setContainerHeight(containerRef.current.offsetHeight);
-    }
-  }, []);
-
-  const { scrollYProgress } = useScroll({ target: containerRef });
-  const y1 = useTransform(scrollYProgress, [0, 1], [0, -containerHeight * 0.17]);
-  const y2 = useTransform(scrollYProgress, [0, 1], [0, containerHeight * 0.17 - 100]);
-
-  const rotate1 = useTransform(scrollYProgress, [0, 1], [0, 30]);
-  const rotate2 = useTransform(scrollYProgress, [0, 1], [0, -20]);
+  useGSAP(() => {
+    gsap.from(image1Ref.current, {
+      rotate: 50,
+      y: 190,
+      scrollTrigger: {
+        // pin: '.content',
+        trigger: box.current,
+        start: 'top bottom',
+        end: () => `+=${box.current!.offsetHeight}`,
+        scrub: true
+        // markers: true
+      }
+    });
+    gsap.from(image2Ref.current, {
+      rotate: 50,
+      y: -190,
+      scrollTrigger: {
+        // pin: '.content',
+        trigger: box.current,
+        start: 'top center',
+        end: () => `+=${box.current!.offsetHeight}`,
+        scrub: true
+        // markers: true
+      }
+    });
+    gsap.from(bgRef.current, {
+      scale: 0.7,
+      borderRadius: 90,
+      scrollTrigger: {
+        // pin: '.content',
+        trigger: box.current,
+        start: 'top bottom-=100',
+        end: () => `+=70%`,
+        scrub: true
+      }
+    });
+  });
 
   return (
-    <div ref={containerRef} className={`${className} relative overflow-hidden`}>
-      <motion.img
-        style={{ y: y1, rotate: rotate1 }}
+    <div ref={box} className={`${className} relative overflow-hidden`}>
+      <div className="-z-12 absolute w-full h-full bg-white"></div>
+      <div
+        ref={bgRef}
+        className="-z-11 absolute w-full h-full bg-midnight"
+        style={{ scale: 1.0 }}
+      ></div>
+      <img
+        ref={image1Ref}
+        // style={{ y: y1, rotate: rotate1 }}
         className="absolute opacity-50 sm:top-[-26%]  top-[-9%] left-[-15%] sm:w-[60vw] w-90 -z-10"
         src={blt1}
-        alt="parallax"
       />
-      <motion.img
-        style={{ y: y2, rotate: rotate2 }}
+      <img
+        ref={image2Ref}
+        // style={{ y: y2, rotate: rotate2 }}
         className="absolute opacity-50 sm:bottom-[-26%] bottom-[-5%] right-[-20%] sm:w-[60vw] w-200 -z-10"
         src={blt2}
-        alt="parallax"
       />
       {children}
     </div>
