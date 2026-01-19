@@ -14,7 +14,7 @@ const HomeAboutUs: React.FC = () => {
       yPercent: 50,
       scrollTrigger: {
         trigger: containerRef.current,
-        start: 'bottom-=10% bottom',
+        start: 'bottom bottom',
         end: '+=100%',
         scrub: true
       }
