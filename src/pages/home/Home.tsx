@@ -7,6 +7,7 @@ import HomeHero from './Hero/Home.Hero';
 import HomeWeuse from './weuse/Home.Weuse';
 import { ScrollSmoother } from 'gsap/all';
 import gsap from 'gsap';
+import { HomeOther } from './Other/Home.Other';
 
 gsap.registerPlugin(ScrollSmoother);
 
@@ -29,6 +30,7 @@ function Home() {
       <HomeWeuse />
       <HomeFeatures />
       <HomeAboutUs />
+      <HomeOther />
     </>
   );
 }

@@ -21,7 +21,7 @@ const HeaderBody: React.FC<HeaderBodyProps> = ({ children }) => {
   return (
     <div
       className={clsx(
-        `fixed z-998 w-screen flex justify-between items-center m2:px-37.5 md:px-20 px-10 transition-all duration-300`,
+        `fixed z-998 w-screen flex justify-between items-center m2:px-37.5 md:px-20 px-10 transition-all duration-300 text-white navbar`,
         { 'bg-midnight shadow-lg h-16': scrolled, 'bg-transparent h-25': !scrolled }
       )}
     >

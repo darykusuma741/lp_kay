@@ -3,10 +3,10 @@ import MyLogo from '../../common/components/MyLogo';
 
 const HeaderNav: React.FC = () => {
   return (
-    <nav className="flex justify-center items-center text-white text-[1rem] gap-17">
+    <nav className="flex justify-center items-center text-[1rem] gap-17">
       <MyLogo />
       <ul className="m2:flex hidden space-x-17">
-        <li className="hover:text-gray-200 cursor-pointer">
+        <li className="cursor-pointer">
           <NavLink
             to="/"
             className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
@@ -14,7 +14,7 @@ const HeaderNav: React.FC = () => {
             Home
           </NavLink>
         </li>
-        <li className="hover:text-gray-200 cursor-pointer">
+        <li className="cursor-pointer">
           <NavLink
             to="/product"
             className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
@@ -22,7 +22,7 @@ const HeaderNav: React.FC = () => {
             Product
           </NavLink>
         </li>
-        <li className="hover:text-gray-200 cursor-pointer">
+        <li className="cursor-pointer">
           <NavLink
             to="/services"
             className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
@@ -30,7 +30,7 @@ const HeaderNav: React.FC = () => {
             Services
           </NavLink>
         </li>
-        <li className="hover:text-gray-200 cursor-pointer">
+        <li className="cursor-pointer">
           <NavLink
             to="/contact"
             className={({ isActive }) => (isActive ? `custom-link-active` : `custom-link`)}
