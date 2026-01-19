@@ -31,7 +31,7 @@ const HomeFeaturesItems: React.FC<HomeFeaturesItemsProps> = ({ src, title, conte
     const splitdes = SplitText.create(desRef.current, { type: 'chars' });
     gsap.from(splitdes.chars, {
       opacity: 0,
-      x: 70,
+      x: -70,
       stagger: 0.1,
       filter: 'blur(10px)',
       scrollTrigger: {

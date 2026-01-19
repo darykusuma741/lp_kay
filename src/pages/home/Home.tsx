@@ -16,9 +16,9 @@ function Home() {
     ScrollSmoother.create({
       wrapper: '.container',
       content: '.content',
-      smooth: 2.5,
+      smooth: 1.5,
       effects: true,
-      smoothTouch: 0.2
+      smoothTouch: 1.5
     });
   });
 

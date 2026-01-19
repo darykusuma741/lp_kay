@@ -47,7 +47,7 @@ const MyBg2: React.FC<MyBg2Props> = ({ className, children }) => {
         // pin: '.content',
         trigger: box.current,
         start: 'top bottom-=100',
-        end: () => `+=70%`,
+        end: () => `+=80%`,
         scrub: true
       }
     });

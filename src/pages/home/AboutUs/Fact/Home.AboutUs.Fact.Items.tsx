@@ -39,12 +39,14 @@ const HomeAboutUsFactItems: React.FC<HomeAboutUsFactItemsProps> = ({
 
   return (
     <div ref={ref} className="flex flex-col text-white font-ibm text-center">
-      <motion.pre className="text-[2.25rem] mb-1.5">
+      <motion.pre className="sm:text-[2.25rem] text-[2.0rem] sm:mb-1.5 mb-1">
         <motion.span>{rounded}</motion.span>
         {title}
       </motion.pre>
-      <label className="text-stone mb-[0.3rem]">{subtitle}</label>
-      <label className="text-[0.8rem] text-stone font-thin">{subtitle2}</label>
+      <label className="text-stone sm:mb-[0.3rem] mb-0 sm:text-[1.0rem] text-[.7rem]">
+        {subtitle}
+      </label>
+      <label className="sm:text-[.8rem] text-[.6rem] text-stone font-thin">{subtitle2}</label>
     </div>
   );
 };
