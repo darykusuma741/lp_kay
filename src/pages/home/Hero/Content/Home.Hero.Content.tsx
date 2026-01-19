@@ -1,18 +1,8 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
 import MyPerson from '../../../../common/components/MyPerson';
 
 const HomeHeroContent: React.FC = () => {
-  // ambil scroll position
-  const { scrollY } = useScroll();
-
-  // transform scroll ke translateY untuk parallax
-  const y = useTransform(scrollY, [0, 700], [0, -100], { clamp: true });
-
   return (
-    <motion.div
-      style={{ y }}
-      className="sm:mt-35 mt-10 sm:mb-35 mb-0 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20"
-    >
+    <div className="sm:mt-35 mt-10 sm:mb-35 mb-0 hero-container-content w-screen flex justify-center items-center m2:px-37.5 md:px-20 px-10 gap-20">
       <div className="flex flex-col gap-6 sm:w-140 w-full hero-container-content-1">
         <h1 className="text-white font-ibm font-normal sm:text-[4rem] text-[2rem]">
           Founder of{' '}
@@ -42,7 +32,7 @@ const HomeHeroContent: React.FC = () => {
       {/* <div className="lg:block sm:hidden block w-90 items-center hero-container-photo">
         <img src={photo} />
       </div> */}
-    </motion.div>
+    </div>
   );
 };
 
