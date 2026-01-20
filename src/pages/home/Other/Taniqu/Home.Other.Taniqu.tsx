@@ -21,8 +21,7 @@ const HomeOtherTaniqu: React.FC = () => {
           trigger: wrapperRef.current,
           start: 'top center-=35%',
           end: '+=65%',
-          scrub: true,
-          markers: true
+          scrub: true
         }
       });
       tmWrapper.from(btnPlaystoreRef.current, { opacity: 0, y: 100 }, 0.4);
