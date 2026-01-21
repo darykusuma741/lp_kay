@@ -50,13 +50,13 @@ function Contact() {
             </div>
           </div>
           <div className="flex gap-10">
-            <div className="bg-white/15 h-9 w-9 rounded-full flex justify-center items-center">
+            <div className="bg-white/15 h-9 w-9 rounded-full flex justify-center items-center cursor-pointer">
               <img src={twitterImg} className="h-3" />
             </div>
-            <div className="bg-white h-9 w-9 rounded-full flex justify-center items-center">
+            <div className="bg-white h-9 w-9 rounded-full flex justify-center items-center cursor-pointer">
               <img src={instagramImg} className="h-4" />
             </div>
-            <div className="bg-white/15 h-9 w-9 rounded-full flex justify-center items-center">
+            <div className="bg-white/15 h-9 w-9 rounded-full flex justify-center items-center cursor-pointer">
               <img src={discordImg} className="h-3" />
             </div>
           </div>
