@@ -1,0 +1,47 @@
+import clsx from 'clsx';
+
+function Contact() {
+  return (
+    <div className="flex justify-center items-center overflow-hidden w-screen h-screen bg-midnight px-10">
+      <div
+        className={clsx(
+          'flex w-280 bg-midnight shadow-2xl shadow-gray-500/10 rounded-2xl overflow-hidden',
+          'font-poppins text-white',
+          'relative'
+        )}
+      >
+        <div className="bg-midnight w-[65%] h-full flex flex-col justify-center px-10 py-20 gap-10">
+          <div className="flex flex-col">
+            <h1>Contact Informations</h1>
+            <h1 className="text-[0.62rem]">Say something to start a live chat!</h1>
+          </div>
+          <div className="flex flex-col gap-2">
+            <div className="flex flex-row gap-2">
+              <div className="bg-white w-4.5 h-4.5" />
+              <h1 className="text-sm">darykusuma741@gmail.com</h1>
+            </div>
+            <div className="flex flex-row gap-2">
+              <div className="bg-white w-4.5 h-4.5" />
+              <h1 className="text-sm">+62 882 4608 1309</h1>
+            </div>
+            <div className="flex flex-row gap-2">
+              <div className="bg-white w-4.5 h-4.5" />
+              <h1 className="text-sm max-w-60">
+                Jl. Damai No.104, RT.24/RW.5, Gandul, Kec. Cinere, Kota Depok, Jawa Barat 16514
+              </h1>
+            </div>
+          </div>
+          <div className="flex flex-row gap-7">
+            <div className="bg-white w-7 h-7" />
+            <div className="bg-white w-7 h-7" />
+            <div className="bg-white w-7 h-7" />
+          </div>
+        </div>
+        <div className="bg-gray w-[35%]">{/* <h1>Contact Informations</h1> */}</div>
+        <div className="bg-blue"></div>
+      </div>
+    </div>
+  );
+}
+
+export default Contact;
