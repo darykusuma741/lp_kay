@@ -1,77 +1,103 @@
-# React + TypeScript + Vite
+Kay Digital Studio Website
 
-# untuk masuk di dalam container
+Official website for Kay Digital Studio, a digital studio focused on crafting modern, high-performance, and visually engaging web experiences.
 
-docker exec -it lp_kay sh
+🌐 Live Website: https://kaydigitalstudio.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 Tech Stack
 
-Currently, two official plugins are available:
+This website is built using a modern front-end and deployment stack:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Vite + React — Fast development environment and optimized production build
 
-## React Compiler
+Tailwind CSS — Utility-first CSS framework for rapid and consistent styling
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+GSAP (GreenSock Animation Platform) — High-performance animations and scroll-based interactions
 
-## Expanding the ESLint configuration
+Docker — Containerized build for consistency across environments
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Nginx — Lightweight and high-performance web server for production
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+✨ Features
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Responsive design (desktop, tablet, mobile)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Smooth and interactive animations using GSAP
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Modern UI/UX with clean layout and typography
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x';
-import reactDom from 'eslint-plugin-react-dom';
+Optimized production build served via Nginx
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-]);
-```
+Fully containerized using Docker
+
+🛠️ Development Setup
+
+1. Clone Repository
+
+git clone git@github.com:darykusuma741/lp_kay.git
+cd lp_kay
+
+2. Install Dependencies
+
+npm install
+
+# or
+
+pnpm install
+
+3. Run Development Server
+
+npm run dev
+
+The app will be available at:
+
+http://localhost:5173
+
+🧱 Build for Production
+
+npm run build
+
+This will generate optimized static files inside the dist/ directory.
+
+🐳 Docker & Nginx Setup
+
+Build and Run with Docker Compose
+
+docker-compose up --build
+
+Once running, the website will be accessible at:
+
+http://localhost
+
+Nginx serves the production-ready build from the dist/ folder.
+
+🎬 Animation Notes (GSAP)
+
+GSAP is used for scroll-based and interactive animations
+
+Includes parallax effects and smooth transitions
+
+Optimized to avoid layout shift and performance issues
+
+📦 Deployment
+
+This website is production-ready and can be deployed on:
+
+VPS (DigitalOcean, AWS, GCP, etc.)
+
+Docker-based hosting environments
+
+Any server supporting Docker & Nginx
+
+👨‍💻 Author
+
+Dary Kusuma Hardian Mobile & Web Engineer
+
+LinkedIn: https://www.linkedin.com/in/dary-kusuma-hardian-448002129
+
+📄 License
+
+This project is proprietary and owned by Kay Digital Studio.
+All rights reserved.
+
+✨ Crafted with passion, performance, and attention to detail.
