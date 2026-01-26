@@ -34,23 +34,6 @@ const HomeAboutUsContent: React.FC = () => {
         scrub: true
       }
     });
-
-    // gsap.fromTo(
-    //   imgAboutRef.current,
-    //   { x: 0 },
-    //   {
-    //     // filter: 'blur(10px)',
-    //     xPercent: 50,
-    //     scrollTrigger: {
-    //       pin: true,
-    //       trigger: imgAboutRef.current,
-    //       start: 'top center-=200',
-    //       end: () => `+=50%`,
-    //       scrub: true,
-    //       markers: true
-    //     }
-    //   }
-    // );
   });
 
   return (

@@ -89,7 +89,7 @@ const HomeWeuse: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="bg-white sm:h-20 h-18">{containerRef.current?.offsetHeight ?? 0}</div>
+      <div className="bg-white sm:h-20 h-18"></div>
     </>
   );
 };
