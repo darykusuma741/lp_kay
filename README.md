@@ -1,103 +1,45 @@
-Kay Digital Studio Website
+# Kay Digital Studio Landing Page
 
-Official website for Kay Digital Studio, a digital studio focused on crafting modern, high-performance, and visually engaging web experiences.
+A modern landing page for Kay Digital Studio, built using React, TypeScript, Tailwind CSS, and Vite.  
+This project demonstrates responsive design, smooth animations, and an engaging user experience.
 
-🌐 Live Website: https://kaydigitalstudio.com
+🔗 **Live Demo:** [https://kaydigitalstudio.com](https://kaydigitalstudio.com)
 
-🚀 Tech Stack
+## Features
 
-This website is built using a modern front-end and deployment stack:
+- Fully responsive landing page UI
+- Smooth animations and transitions
+- Built with React + TypeScript + Tailwind CSS
+- Fast development with Vite
+- ESLint and Prettier configured for consistent code style
+- Docker-ready setup (optional)
 
-Vite + React — Fast development environment and optimized production build
+## Tech Stack
 
-Tailwind CSS — Utility-first CSS framework for rapid and consistent styling
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- pnpm
+- Docker (optional)
+- ESLint + Prettier
 
-GSAP (GreenSock Animation Platform) — High-performance animations and scroll-based interactions
+## Getting Started
 
-Docker — Containerized build for consistency across environments
+### Install Dependencies
 
-Nginx — Lightweight and high-performance web server for production
-
-✨ Features
-
-Responsive design (desktop, tablet, mobile)
-
-Smooth and interactive animations using GSAP
-
-Modern UI/UX with clean layout and typography
-
-Optimized production build served via Nginx
-
-Fully containerized using Docker
-
-🛠️ Development Setup
-
-1. Clone Repository
-
-git clone git@github.com:darykusuma741/lp_kay.git
-cd lp_kay
-
-2. Install Dependencies
-
-npm install
-
-# or
-
+```bash
 pnpm install
+```
 
-3. Run Development Server
+### Run Project
 
-npm run dev
+```bash
+pnpm dev
+```
 
-The app will be available at:
+### Build Project
 
-http://localhost:5173
-
-🧱 Build for Production
-
-npm run build
-
-This will generate optimized static files inside the dist/ directory.
-
-🐳 Docker & Nginx Setup
-
-Build and Run with Docker Compose
-
-docker-compose up --build
-
-Once running, the website will be accessible at:
-
-http://localhost
-
-Nginx serves the production-ready build from the dist/ folder.
-
-🎬 Animation Notes (GSAP)
-
-GSAP is used for scroll-based and interactive animations
-
-Includes parallax effects and smooth transitions
-
-Optimized to avoid layout shift and performance issues
-
-📦 Deployment
-
-This website is production-ready and can be deployed on:
-
-VPS (DigitalOcean, AWS, GCP, etc.)
-
-Docker-based hosting environments
-
-Any server supporting Docker & Nginx
-
-👨‍💻 Author
-
-Dary Kusuma Hardian Mobile & Web Engineer
-
-LinkedIn: https://www.linkedin.com/in/dary-kusuma-hardian-448002129
-
-📄 License
-
-This project is proprietary and owned by Kay Digital Studio.
-All rights reserved.
-
-✨ Crafted with passion, performance, and attention to detail.
+```bash
+pnpm build
+```
